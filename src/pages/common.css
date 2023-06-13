@@ -1,0 +1,32 @@
+.whyChoose{
+    background-image: url('../assets/img/whyChooseBg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heroBg{
+    background-image: url('../assets/img/heroBg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.whataappBg{
+    background-image: url('../assets/img/whatsappBg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+.greenbg{
+    background-image: url('../assets/img/greenBg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.redbg{
+    background-image: url('../assets/img/redBg.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

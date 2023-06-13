@@ -8,16 +8,19 @@ module.exports = {
   theme: {
     extend: {
       
+      
     },
     colors:{
       btnColor:'#F97C5F',
       
       lightBg:{
         n:'#FFF8F3',
-        h:"#FFE8E0"
+        h:"#FFE8E0",
+        b:'#FFDAC5'
       },
       normalbg:"#FFFFFF",
-      dark:'#000000'
+      dark:'#000000',
+      whatsappBg:"rgba(57, 25, 117, 0.8)"
 
 
     },

@@ -1,7 +1,11 @@
 "use client"
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import { useState ,useEffect} from "react"
-
-export default function  Header(){
+import Navbar from "./navbar"
+import MobileNav from './mobileNav';
+export default function  Header({myRef}){
+  const [isMobile,setIsMobile]=useState(false)
   const [scroll,setScroll]=useState(false)
   useEffect(()=>{
         window.addEventListener("scroll",()=>{
@@ -21,52 +25,7 @@ export default function  Header(){
     </a>
       </div>
 
-      <div class="hidden md:block">
-        <nav aria-label="Global">
-        <ul class="flex items-center gap-6 text-sm">
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              About Us
-            </a>
-          </li>
-
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              Services
-            </a>
-          </li>
-
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              Features
-            </a>
-          </li>
-
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              Pricing
-            </a>
-          </li>
-
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              Review
-            </a>
-          </li>
-
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              Become A Tutor
-            </a>
-          </li>
-          <li>
-            <a class="text-black transition font-sans font-medium hover:text-black/75" href="/">
-              Admin
-            </a>
-          </li>
-        </ul>
-        </nav>
-      </div>
+      <Navbar ref={myRef}/>
 
       <div class="flex items-center gap-4">
         <div class="sm:flex sm:gap-4">
@@ -87,26 +46,8 @@ export default function  Header(){
           </div>
         </div>
 
-        <div class="block md:hidden">
-          <button
-            class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+       {/* <button className='lg:hidden' onClick={()=>setIsMobile(!isMobile)}>{isMobile ? (<MenuOutlinedIcon/>) : (<CloseOutlinedIcon/>)}</button>
+       <div className={`${isMobile ? "left-0" :"-left-full"} fixed top-0 bottom-0 w-[60vw] lg:hidden transition-all`}><MobileNav/></div> */}
       </div>
     </div>
   </div>

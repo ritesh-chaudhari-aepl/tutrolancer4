@@ -15,7 +15,7 @@ export default function Home() {
       <Whychoose/>
         <HowItWorks/>
         <WhatsappSupport/>
-      {/* <Instructor/> */}
+      <Instructor/>
         <CoreFeatures/>
         <ContactUs/>
         <Testimonial/>

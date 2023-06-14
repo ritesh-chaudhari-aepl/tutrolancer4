@@ -10,9 +10,9 @@ export default function  Header(){
   },[])
     return(<>
     <header class={`${
-      scroll ? "top-0 z-20 bg-lightBg-n overflow-hidden shadow-sm sm:top-0 sm:py-10 shadow-btnColor" : 
+      scroll ? "top-0 z-20 bg-lightBg-n overflow-hidden   sm:top-0 sm:py-10 shadow-xl shadow-dark" : 
       "top-0 sm:top-0" 
-    } py-6 bg-lightBg-h w-full sm:py-8 fixed transition-all z-10`}>
+    } py-2 bg-lightBg-h h-fit w-full sm:py-5 fixed transition-all z-10`}>
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="md:flex md:items-center md:gap-12">
@@ -71,7 +71,7 @@ export default function  Header(){
       <div class="flex items-center gap-4">
         <div class="sm:flex sm:gap-4">
         <a
-            class="block rounded-3xl   px-5 py-2.5 text-opacity-0  text-sm font-medium font-sans   transition hover: border-2"
+            class="block rounded-3xl   px-5 py-2.5 text-opacity-0  text-sm font-medium font-sans   transition border-2"
             href="/"
           >
             Sign In

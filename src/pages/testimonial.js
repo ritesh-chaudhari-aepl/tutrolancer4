@@ -17,12 +17,12 @@ export default function Testimonial(){
                 </div>
                 <div className="flex max-w-3xl text-center items-center m-auto">
                 <button><ArrowBackIosIcon/></button>
-                <div className='bg-normalbg   rounded-xl justify-center items-center flex-col flex shadow-md shadow-btnColor py-16 sm:py-24  p-6'>
+                <div className='bg-normalbg   rounded-xl justify-center items-center flex-col flex shadow-md shadow-btnColor'>
                 <blockquote className='relative'>
                         <div className='font-sans '>
                             
                             <svg
-                className="absolute top-0 left-0 transform -translate-x-6 -translate-y-24 h-28 w-28 text-gray-100 dark:text-gray-700"
+                className="sm:h-28 sm:w-28 h-20 w-20 text-gray-100 dark:text-gray-700"
                 width="28"
                 height="28"
                 viewBox="0 0 16 16"
@@ -36,15 +36,15 @@ export default function Testimonial(){
                 />
               </svg>
                 
-                Tutorlancer has helped me not only understand the subject but master the answering techniques required to obtain a istinction. the material is not only well compiled and organies but helps immensely with revision.
                              </div>
+               <div className='px-4'> Tutorlancer has helped me not only understand the subject but master the answering techniques required to obtain a istinction. the material is not only well compiled and organies but helps immensely with revision.</div>
                         <div className='font-serif pt-3 text-xl font-bold'>Jhon Dev</div>
                         <div className='font-sans text-sm'>UI/UX Designer</div>
 
 
                           <div className="sv">
                   <svg
-                    className="absolute -bottom-9 sm:top-44 right-0 transform translate-x-4 -translate-y-16 h-28 w-28 text-gray-100 dark:text-gray-700"
+                    className="sm:h-28 sm:w-28 h-20 w-20 float-right text-gray-100 dark:text-gray-700"
                     width="28"
                     height="28"
                     viewBox="0 0 16 16"

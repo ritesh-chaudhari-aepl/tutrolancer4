@@ -1,39 +1,26 @@
-import React from 'react'
-import {nav} from '@/data/nav'
+import React from "react";
+import { nav } from "@/data/nav";
 const Navbar = () => {
   return (
-    <div class="">
-         <nav aria-label="Global">
-        <ul class="flex items-center gap-6 text-sm">
-            
-            {nav.map((value)=>{
-                return(
-                    <li key={value.name}>
-                    <a class="text-black transition font-sans font-medium hover:text-black/75" href={value.href}>
-                       {value.name}
-                    </a>
-                  </li>
-                )
-            })}
-         
-         {/* <div className="item-center justify-center gap-8 flex flex-col lg:hidden">
-          <a
-            href="#"
-            className="inline-block rounded-full bg-transparent px-8 py-4 text-sm font-medium text-black transition hover:bg-indigo-700 capitalize"
-          >
-            Sign Up
-          </a>
-          <a
-            href="#"
-            className="inline-block rounded-full bg-yellow-dark px-8 py-4 text-sm font-medium text-black transition hover:bg-indigo-700 capitalize"
-          >Sign Up </a>
-          </div> */}
-        </ul>
+    <nav>
+      <ul className="flex sm:gap-4">
+        {nav.map((item) => {
+          // destructure item
+          const { href, name } = item;
+          return (
+            <li key={item.name}>
+              <a
+                className="text-dark hover:text-lightBg-b  rounded-md font-Inter sm:text-base font-bold transition"
+                href={href}
+              >
+                {name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
 
-        
-        </nav>
-      </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

@@ -12,6 +12,7 @@ module.exports = {
     },
     colors:{
       btnColor:'#F97C5F',
+      secondary:'#FBAF97',
       
       lightBg:{
         n:'#FFF8F3',

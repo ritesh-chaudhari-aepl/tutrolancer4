@@ -7,11 +7,11 @@ const Instructor = () => {
       aria-label="instructors"
       class="bg-normalbg sm:pb-24 pb-20"
     >
-      <div class="mx-auto max-w-screen-xl py-0 sm:py-16">
-        <div class="flex px-6 flex-col items-center gap-8 sm:gap-6 sm:justify-center lg:flex-row sm:ml-0">
+      <div class="mx-auto max-w-screen-xl py-8 sm:py-16">
+        <div class="flex px-6 flex-col items-center gap-3 sm:gap-6 sm:justify-center lg:flex-row sm:ml-0">
           <div class="card1">
             <div
-              class="redbg card rounded-md w-[360px] sm:w-[530px] sm:h-80 p-4 sm:p-6 flex justify-center flex-col gap-2"
+              class="redbg card rounded-md w-[310px] sm:w-[480px] sm:h-80 p-4 sm:p-6 flex justify-center flex-col gap-0 sm:gap-2"
               
             >
               <span class="text-[#30BEAD] capitalize text-base font-Inter font-semibold">
@@ -32,7 +32,7 @@ const Instructor = () => {
           </div>
           <div class="card2">
             <div
-              class="greenbg card rounded-md w-[360px] sm:w-[530px] sm:h-80 p-4 sm:p-6 flex justify-center flex-col gap-2"
+              class="greenbg card rounded-md w-[310px] sm:w-[480px] sm:h-80 p-4 sm:p-6 flex justify-center flex-col gap-0 sm:gap-2"
               
             >
               <span class="text-[#30BEAD] capitalize text-base font-Inter font-semibold">

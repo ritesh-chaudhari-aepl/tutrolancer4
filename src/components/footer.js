@@ -53,7 +53,11 @@ export default function Footer(){
             </div>
             
             <div className="text-xs text-center px-7 max-w-3xl my-2 sm:w-1/2">
-                 <div>Terms & conditions | Privacy Policy | Refunds</div>
+            <div>
+                <a href="/termandcond">Terms & conditions</a> |{" "}
+                <a href="/privacy">Privacy Policy</a> |{" "}
+                <a href="/refund">Refunds</a>
+            </div>
             </div>
         </div>
         </div>

@@ -1,13 +1,54 @@
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
- 
+import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
+import { useState } from "react";
 
 const ContactUs = () => {
-//   const showToastMessage = () => {
-//     toast.success("Message Sent Successfully", {
-//       position: toast.POSITION.TOP_RIGHT,
-//     });
-//   };
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [subject, setSubject] = useState();
+  const [message, setMessage] = useState();
+
+  const showToastMessage = async() => {
+    const data = {
+      device_number: "Device 4",
+      name,
+      email,
+      phone,
+      subject,
+      message,
+    };
+
+    if (!name || !email || !phone || !subject || !message) {
+      toast.warning("Please fill all required data.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      return;
+    }
+
+    const sendData = await axios.post(
+      "https://dev6apis.el.r.appspot.com/api/deviceWeb/saveDeviceWebData",
+      data
+    );
+
+    console.log(sendData.data.success);
+    if(sendData.data.success) {
+      toast.success("Message Sent Successfully", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      setName("");
+      setEmail("");
+      setPhone("");
+      setSubject("");
+      setMessage("");
+    }
+    else{
+      toast.error("Something went wrong", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  }
+
   return (
     <section id="contact" className="">
       <div className="max-w-screen-2xl px-5 pb-10 sm:pb-16 mx-auto">
@@ -20,10 +61,13 @@ const ContactUs = () => {
           </h1>
         </div>
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
-          <div className="flex flex-wrap -m-2">
+          <form onSubmit={showToastMessage} className="flex flex-wrap -m-2">
             <div className="p-2 w-full sm:w-1/2">
               <div className="relative">
                 <input
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                   placeholder="Name"
                   type="text"
                   id="name"
@@ -35,6 +79,9 @@ const ContactUs = () => {
             <div className="p-2 w-full sm:w-1/2">
               <div className="relative">
                 <input
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
                   type="email"
                   id="email"
@@ -46,6 +93,9 @@ const ContactUs = () => {
             <div className="p-2 w-full sm:w-1/2">
               <div className="relative">
                 <input
+                required
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                   placeholder="Phone"
                   type="number"
                   id="phone"
@@ -57,6 +107,9 @@ const ContactUs = () => {
             <div className="p-2 w-full sm:w-1/2">
               <div className="relative">
                 <input
+                required
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                   placeholder="Subject"
                   type="text"
                   id="subject"
@@ -68,6 +121,9 @@ const ContactUs = () => {
             <div className="p-2 w-full">
               <div className="relative">
                 <textarea
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                   placeholder="Message"
                   rows={4}
                   id="message"
@@ -84,9 +140,9 @@ const ContactUs = () => {
               >
                 Send Now
               </button>
-              {/* <ToastContainer /> */}
+              <ToastContainer />
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>

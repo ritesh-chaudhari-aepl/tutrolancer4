@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import MobileNav from "./mobileNav";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function Header({ myRef }) {
   const [mobileNav, setMobileNav] = useState(false);
@@ -27,39 +28,46 @@ export default function Header({ myRef }) {
           <span className="font-Inter font-bold tracking-[10px] text-2xl uppercase sm:text-[30px]">
             LOGO
           </span>
+          {/* <Image src={logo} className="md:w-24 w-20" alt="logo" /> */}
         </a>
         {/* nav - initially hidden - show on desktop mode */}
         <div className="hidden lg:flex lg:items-center lg:gap-3">
           <Navbar ref={myRef} />
         </div>
-        <div className="hidden lg:block">
+          {/* <div className="hidden sm:block"> */}
+          <div className="flex">
           <a
             href="#"
-            className="inline-block rounded-full bg-transparent px-3 py-4 text-sm font-medium text-black transition hover:bg-indigo-700 capitalize"
+            target="_blank"
+            className="flex gap-2 items-center rounded-full bg-green md:px-8 md:py-4 px-3 py-3 text-sm font-medium text-normalbg transition hover:bg-indigo-700 capitalize"
           >
-            Sign In
+            <BsWhatsapp className="md:text-xl md:font-bold text-lg font-normal" />
+            Chat on Whatsapp
           </a>
-          <a
-            href="#"
-            className="inline-block rounded-full bg-btnColor px-8 py-4 text-sm font-medium text-lightBg-n transition hover:bg-indigo-700 capitalize"
+          {/* <a
+            onClick={() => handleScroll("contact")}
+            className="inline-block cursor-pointer rounded-full bg-gradient-to-r from-pink-darkPink to-blue-light px-8 py-4 text-sm font-medium text-white transition hover:bg-indigo-700 capitalize"
           >
-            Sign Up
-          </a>
+            Contact Us
+          </a> */}
+          {/* cta button - initially hidden - show on desktop mode */}
+          {/* mobile nav trigger btn - hidden on desktop */}
+          <button
+            className="lg:hidden md:ml-4 ml-1"
+            onClick={() => setMobileNav(!mobileNav)}
+          >
+            {mobileNav ? (
+              <HiOutlineX className="text-3xl text-primary" />
+            ) : (
+              <AiOutlineMenu className="text-3xl text-secondary" />
+            )}
+          </button>
+          {/* mobile nav - hidden on desktop */}
         </div>
-        {/* cta button - initially hidden - show on desktop mode */}
-        {/* mobile nav trigger btn - hidden on desktop */}
-        <button className="lg:hidden" onClick={() => setMobileNav(!mobileNav)}>
-          {mobileNav ? (
-            <HiOutlineX className="text-3xl text-primary" />
-          ) : (
-            <AiOutlineMenu className="text-3xl text-secondary" />
-          )}
-        </button>
-        {/* mobile nav - hidden on desktop */}
         <div
           className={`${
             mobileNav ? "left-0" : "-left-full"
-          }  fixed top-0 bottom-0 w-[60vw] lg:hidden transition-all`}
+          }  fixed top-0 bottom-0 w-[60vw] block lg:hidden transition-all`}
         >
           <MobileNav />
         </div>

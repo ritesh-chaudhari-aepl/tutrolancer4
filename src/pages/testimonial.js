@@ -5,7 +5,7 @@ import Image from "next/image"
 import demo from '../assets/img/whyChoose.png'
 export default function Testimonial(){
     return(
-        <div className='bg-lightBg-n my-5 pb-12 font-sans'>
+        <div id="review" className='bg-lightBg-n my-5 pb-12 font-sans'>
             <div className="align-middle   items-center m-auto">
                 <div className=" text-center p-9 font-sans ">
                     <div>

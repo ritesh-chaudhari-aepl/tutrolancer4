@@ -11,7 +11,7 @@ import EditCalendarOutlinedIcon from "@mui/icons-material/EditCalendarOutlined";
 import ServiceCard from "@/components/serviceCard";
 export default function Services() {
   return (
-    <div className=" bg-normalbg py-6 sm:py-14">
+    <div id="services" className=" bg-normalbg py-6 sm:py-14">
       <div className=" sm:max-w-5xl mx-auto max-w-screen-xl  items-center gap-8 px-4 sm:px-6 lg:px-10  ">
         <p className="font-serif text-3xl sm:text-4xl py-7 text-center sm:text-left  font-bold">
           Popular Services

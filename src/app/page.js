@@ -4,7 +4,6 @@ import Whychoose from "@/pages/whychoose";
 import HowItWorks from "@/pages/howItWorks";
 import WhatsappSupport from "@/pages/whatsappSupport";
 // import Instructor from "@/pages/instructor";
-"use client"
 import CoreFeatures from "@/pages/coreFeatures";
 import ContactUs from "@/pages/contactUs";
 // import Testimonial from "@/pages/testimonial";
